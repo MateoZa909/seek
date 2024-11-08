@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Inika:wght@400;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Variables */
+:root {
+    --fondo-general: #353535;
+    --fondo-boton-registro: #202020;
+    --fondo-boton-inicio: #6D6A6A;
+    --inika: 'Inika', sans-serif;
+    --border-radius-general: 8px;
+    --no-border: none;
+    --heigth-general-btn: 35px;
+    --pointer: pointer;
+}
+
+.mobile,
+.desktop {
+    background-color: #353535;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* Logo */
+.icon {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 37px;
+
+    /* Animacion */
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+.icon h1 {
+    /* background-color: lightcyan; */
+    font-family: var(--inika);
+    color: white;
+    font-size: 3rem;
+    font-weight: lighter;
+}
+.icon img {
+    margin-top: -50px;
+    /* background-color: lightcoral; */
+    width: 35px;
+}
+
+/* Contenedor formulario */
+form {
+    width: 100%;
+    padding: 0 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: auto;
+}
+.back-title-registro {
+    width: 100%;
+    padding: 0 5px;
+}
+.back-title-registro h3 {
+    font-family: var(--inika);
+    color: white;
+    font-weight: 500;
+    font-size: 25px;
+}
+.labels-inputs {
+    margin-top: 14px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+.labels-inputs label {
+    font-family: var(--inika);
+    color: white;
+    font-size: 15px;
+    font-weight: lighter;
+}
+.labels-inputs input {
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid white;
+    height: 25px;
+    outline: none;
+}
+.back-btn-registro {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.back-btn-registro button {
+    width: 140px;
+    background-color: var(--fondo-boton-registro);
+    border: var(--no-border);
+    height: var(--heigth-general-btn);
+    color: white;
+    border-radius: var(--border-radius-general);
+    cursor: var(--pointer);
+}
+.back-btn-registro button:active {
+    transform: scale(.97);
+}
+.back-btn-login {
+    width: 100%;
+    display: flex;
+    padding: 0 15px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.back-btn-login p {
+    color: white;
+    font-size: 14px;
+}
+.back-btn-login .back-login {
+    width: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--fondo-boton-inicio);
+    border-radius: var(--border-radius-general);
+    border: var(--no-border);
+    height: var(--heigth-general-btn);
+}
+.back-btn-login .back-login a {
+    text-decoration: none;
+    color: black;
+}
+.back-btn-registro .back-login a:active {
+    transform: scale(.97);
+}
+
+/* Menor resolucion a tablet */
+@media (max-width: 768px) {
+    .desktop {
+        display: none;
+    }
+}
+
+/* Mayor resolucion a tablet */
+@media (min-width: 768px) {
+    .desktop {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    form {
+        gap: 15px;
+    }
+    .back-title-registro {
+        display: flex;
+        justify-content: center;
+    }
+    .back-btn-login {
+        margin-top: 20px;
+    }
+    .labels-inputs label {
+        margin-top: 15px;
+    }
+    .labels-inputs .box-left,
+    .box-right {
+        display: flex;
+        flex-direction: column;
+    }
+    .mobile {
+        display: none;
+    }
+}
+
+/* Resolucion pc  */
+@media (min-width: 1024px) {
+    .icon h1 {
+        font-size: 5rem;
+    }
+    .back-title-registro h3 {
+        margin-right: 20px;
+    }
+    .labels-inputs {
+        display: grid;
+        grid-template-columns: 250px 250px;
+        justify-content: center;
+        align-items: center;
+    }
+    .labels-inputs .box-left,
+    .box-right {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .labels-inputs label {
+        margin-top: 15px;
+    }
+    .labels-inputs input {
+        width: 230px;
+    }
+}
