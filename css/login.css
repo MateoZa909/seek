@@ -65,11 +65,11 @@ form {
     justify-content: space-between;
     height: auto;
 }
-.back-title-registro {
+.back-title-login {
     width: 100%;
     padding: 0 5px;
 }
-.back-title-registro h3 {
+.back-title-login h3 {
     font-family: var(--inika);
     color: white;
     font-weight: 500;
@@ -161,7 +161,7 @@ form {
     form {
         gap: 15px;
     }
-    .back-title-registro {
+    .back-title-login {
         display: flex;
         justify-content: center;
     }
@@ -186,20 +186,15 @@ form {
     .icon h1 {
         font-size: 5rem;
     }
-    .back-title-registro h3 {
+    .back-title-login h3 {
         margin-right: 20px;
     }
     .labels-inputs {
         display: grid;
-        grid-template-columns: 250px 250px;
+        grid-template-columns: repeat(2, 250px);
+        padding-left: 40px;
         justify-content: center;
         align-items: center;
-    }
-    .labels-inputs .box-left,
-    .box-right {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
     }
     .labels-inputs label {
         margin-top: 15px;
